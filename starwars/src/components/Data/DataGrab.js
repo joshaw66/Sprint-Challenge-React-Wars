@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import Page from '../Page/Page';
+import StarPage from '../Page/StarPage';
+import { Card } from 'reactstrap';
 
 const DataGrab = () => {
   const [data, setData] = useState ([]);
@@ -9,19 +10,19 @@ const DataGrab = () => {
     axios.get("http https://swapi.co/api/people/")
     .then(response => {
       console.log(response)
-      setData(response.data.results)
+      setData(response.data.results);
     })
-    .catch(err => {
-      console.log(err)
-    })
+    .catch(err =>
+      console.log("The Force is not With You", err)
+  )
   },[])
   
   return (
-    <div>
-      {data.map(i => (
-        <Page data = {i}/>
-      ))}
-    </div>
+		<div>
+			{data.map(i => (
+	        <StarPage data ={i}/>
+	    ))}
+	  </div>
   );
 }
 

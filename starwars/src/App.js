@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import DataGrab from './components/Data/DataGrab';
+import StarPage from './components/Page/StarPage';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out

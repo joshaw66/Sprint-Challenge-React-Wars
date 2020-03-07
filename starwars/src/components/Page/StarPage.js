@@ -5,7 +5,7 @@ const Body = styled.div
 
 const Card = styled.div
 
-const Page = (props) => {
+const StarPage = (props) => {
   return (
     <Body>
       <Card>
@@ -19,4 +19,4 @@ const Page = (props) => {
   );
 }
 
-export default Page;
+export default StarPage;
