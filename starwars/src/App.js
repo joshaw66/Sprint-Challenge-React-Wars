@@ -25,12 +25,19 @@ const App = () => {
     });
 }, [])
 
+if (!characters) return <h3>Loading...</h3>;
+
   return (
-    <div>
-      <div className="App">
-        <h1 className="Header">Joshua's React Wars</h1>
-          <StarPage />
-      </div>
+    <div className="App">
+      <h1 className="Header">Joshua's React Wars</h1>
+      {
+        characters.map((item) => {
+          console.log(item)
+          return (
+            <StarPage person={item}/>
+          );
+        })
+      }
     </div>
   );
 }
