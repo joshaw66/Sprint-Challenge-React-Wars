@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Page = props => {
+const Body = styled.div
+
+const Card = styled.div
+
+const Page = (props) => {
   return (
-    <body>
-      <information>
+    <Body>
+      <Card>
         <h1>{props.data.name}</h1>
         <h3>{props.data.eye_color}</h3>
         <h3>{props.data.home_world}</h3>
         <h3>{props.data.species}</h3>
         <h3>{props.data.vehicles}</h3>
-      </information>
-    </body>
+      </Card>
+    </Body>
   );
 }
 
