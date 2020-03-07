@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import './App.css';
+import Page from '../Page/Page';
 
-const Data = () => {
+const DataGrab = () => {
   const [data, setData] = useState ([]);
 
   useEffect(() => {
@@ -19,11 +19,11 @@ const Data = () => {
   return (
     <div>
       {data.map(i => (
-        <cardCreator data = {i}/>
+        <Page data = {i}/>
       ))}
     </div>
   );
 }
 
-export default Data;
+export default DataGrab;
 
