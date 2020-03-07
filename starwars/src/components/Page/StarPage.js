@@ -14,27 +14,36 @@ const StyledHeader1 = styled.h2`
   }
   `;
 
-  // Card Styles //
+// Card Styles //
 
-  const StyledCard = styled.p`
-    display: inline-block;
-    background: lightblue;
-    height: auto;
-    margin-bottom: 15px;
-    border: 3px solid black;
-    `;
+const StyledSection = styled.section`
+  display: inline-block;
+  padding: 3%;
+  margin: 2%;
+  background: lightblue;
+  height: auto;
+  margin-bottom: 15px;
+  border: 3px solid black;
+  `;
+
+// Content Styles //
+
+const StyledPage = styled.p`
+  color: black;
+  opacity: 2;
+  `;
 
 export function StarPage(props) {
 if (!props.person) return <h2>Here You Go!</h2>;
 
   return (
-      <div>
+      <StyledSection>
         <StyledHeader1>{props.person.name}</StyledHeader1>
-        <StyledCard>Eye Color: {props.person.eye_color}</StyledCard>
-        <StyledCard>Height: {props.person.height}</StyledCard>
-        <StyledCard>Mass: {props.person.mass}</StyledCard>
-        <StyledCard>Hair Color: {props.person.hair_color}</StyledCard>
-      </div>
+        <StyledPage>Eye Color: {props.person.eye_color}</StyledPage>
+        <StyledPage>Height: {props.person.height}</StyledPage>
+        <StyledPage>Mass: {props.person.mass}</StyledPage>
+        <StyledPage>Hair Color: {props.person.hair_color}</StyledPage>
+      </StyledSection>
   );
   }
 
